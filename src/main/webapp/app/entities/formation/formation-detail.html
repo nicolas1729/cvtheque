@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Formation</span> {{vm.formation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Nom</span></dt>
+        <dd>
+            <span>{{vm.formation.nom}}</span>
+        </dd>
+        <dt><span>Etablissement</span></dt>
+        <dd>
+            <span>{{vm.formation.etablissement}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.formation.description}}</span>
+        </dd>
+        <dt><span>Datedebut</span></dt>
+        <dd>
+            <span>{{vm.formation.datedebut | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Datefin</span></dt>
+        <dd>
+            <span>{{vm.formation.datefin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.formation.user.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="formation-detail.edit({id:vm.formation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

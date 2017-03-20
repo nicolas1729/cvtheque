@@ -1,0 +1,8 @@
+version: '2'
+services:
+    cvtheque-sonar:
+        container_name: cvtheque-sonar
+        image: sonarqube:6.1-alpine
+        ports:
+            - 9000:9000
+            - 9092:9092

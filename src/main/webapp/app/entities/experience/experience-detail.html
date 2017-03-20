@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Experience</span> {{vm.experience.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Intitule</span></dt>
+        <dd>
+            <span>{{vm.experience.intitule}}</span>
+        </dd>
+        <dt><span>Datedebut</span></dt>
+        <dd>
+            <span>{{vm.experience.datedebut | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Datefin</span></dt>
+        <dd>
+            <span>{{vm.experience.datefin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Entreprise</span></dt>
+        <dd>
+            <span>{{vm.experience.entreprise}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.experience.description}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.experience.user.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="experience-detail.edit({id:vm.experience.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

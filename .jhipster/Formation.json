@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "etablissement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datedebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "datefin",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170108214733",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "formation",
+    "pagination": "infinite-scroll"
+}
